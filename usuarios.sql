@@ -36,7 +36,6 @@ CREATE TABLE `usuarios` (
   `fecnac` date NOT NULL,
   `genero` char(1) NOT NULL,
   `tipo_vehiculo` char(1) NOT NULL,
-  `marca` varchar(50) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
