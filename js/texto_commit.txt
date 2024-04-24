@@ -1,0 +1,4 @@
+Ir a Source control - Hacer commit e insertar - Terminal
+
+git config --global user.name agustintf 
+git config --global user.email agustintfernandez@gmail.com 
