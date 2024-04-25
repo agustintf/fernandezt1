@@ -2,7 +2,7 @@
 $(document).ready(function()
 {
 
-//  alert('Entró a la función');
+    //alert('Entró a la función');
     insertar_registro();
 })
 
@@ -13,13 +13,20 @@ function insertar_registro()
     //evento click en el boton #btn-register
     $(document).on('click','#btn-register', function()
     {
-        var User = $('UserName').val();
-        var Email = $('UserEmail').val();
+        var User = $('#nombre').val();
+        var Apellido = $('#apellido').val();
+        var Email = $('#email').val();
+        var Password = $('#password').val();
+        var FecNac = $('#fecha_nacimiento').val();
+        var Genero = $('#genero').val();
+        var Tipo_vehiculo = $('#tipo_vehiculo').val();
+        var Repetir = $('#repetir').val();
+
 
         //validacion por frontend
         if(User == "" || Email== "")
         {
-            $('message').html('Llenar los campos en blanco');
+            $('#message').html('Llenar los campos en blanco');
         }
         else
         {
