@@ -1,8 +1,6 @@
 //Esta funcion se ejecuta cuando incluya... 
 $(document).ready(function()
 {
-
-    //alert('Entró a la función');
     insertar_registro();
 })
 
@@ -26,7 +24,7 @@ function insertar_registro()
         //validacion por frontend
         if(User == "" || Email== "")
         {
-            $('#message').html('Llenar los campos en blanco');
+            $('#mensaje').html('Llenar los campos en blanco');
         }
         else
         {
@@ -34,13 +32,16 @@ function insertar_registro()
                 {
                     url: 'insertar.php',
                     method: 'post',
-                    data:{UName:User, UEmail:Email},   //Etiqueta:
+                    data: {UName:User, UApellido:Apellido, UEmail:Email, UPassword:Password, UFecNac:FecNac, UGenero:Genero, UTipo_vehiculo:Tipo_vehiculo, URepetir:Repetir},   //Etiqueta:
                     success: function(data)
                     {
-                        $('#message').html(data);
+                        $('#mensaje').html('Se insertó bien');
+                    //    $('#mensaje').html(data);
                     //    $('#Registration').modal('show');
                     //    $('form').trigger('reset');
                     //    Mostrar_registro();
+                        alert("Entró a la función");
+                        alert(data);
                     }
                 }
             )
