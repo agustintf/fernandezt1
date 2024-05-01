@@ -35,8 +35,8 @@ function insertar_registro()
                     data: {UName:User, UApellido:Apellido, UEmail:Email, UPassword:Password, UFecNac:FecNac, UGenero:Genero, UTipo_vehiculo:Tipo_vehiculo, URepetir:Repetir},   //Etiqueta:
                     success: function(data)
                     {
-                        $('#mensaje').html('Se insertó bien');
-                    //    $('#mensaje').html(data);
+                    //    $('#mensaje').html('Se insertó bien');
+                        $('#mensaje').html(data);
                     //    $('#Registration').modal('show');
                     //    $('form').trigger('reset');
                     //    Mostrar_registro();
