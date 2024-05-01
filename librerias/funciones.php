@@ -14,13 +14,13 @@ function insertarRegistro()
     $UTipo_Vehiculo= $_POST['UTipo_vehiculo'];
     $Repetir= $_POST['URepetir'];
   
-    $query= "INSERT INTO usuarios (nombre, apellido, email, password, fecnac, genero, tipo_vehiculo, repetir) values('$UserName', '$Apellido', '$Email', '$Password', str_to_date('$FecNac', '&d/%m/%Y'), '$UGenero', '$UTipo_Vehiculo, '$Repetir') ";
+    $query= "INSERT INTO usuarios (nombre, apellido, email, pass, fecnac, genero, tipo_vehiculo, repetir) VALUES('$UserName', '$Apellido', '$Email', '$Password', str_to_date('$FecNac', '%d/%m/%Y'), '$UGenero', '$UTipo_Vehiculo', '$Repetir') ";
 
     $result= mysqli_query($con,$query);
 
     if($result)
     {
-        echo ' El registro se creo exitosamente';
+        echo 'El registro se creo exitosamente';
     }
     else
     {
