@@ -19,7 +19,7 @@ class TestNombre():
     self.driver.quit()
   
   def test_nombre(self):
-    self.driver.get("http://127.0.0.1/fernandezt1/formulario.html")
+    self.driver.get("http://127.0.0.1/Testing/formulario.html")
     self.driver.set_window_size(1050, 700)
     self.driver.find_element(By.ID, "nombre").click()
     self.driver.find_element(By.ID, "nombre").send_keys("agustin")
