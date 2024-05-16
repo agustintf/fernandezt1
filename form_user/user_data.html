@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+  
+  <title>Datos Personales (empleado)</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <style>
+    /* Agrego el * en rojo para los requeridos */
+    .required-label::after{
+        content: ' *';
+        color: red;
+    }    
+    body {
+      background-color: #d38622;
+      
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f3b887;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(253, 0, 0, 0.1);
+    }
+    
+    .codarea {
+            width: 80px; /* Ajusta el ancho del campo de código de área */
+            margin-right: 10px; /* Espacio entre los campos */
+    }
+
+    .telefono {
+            flex-grow: 0; /* Hace que el campo del número de teléfono ocupe el espacio restante */
+    }
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form name="datosempleado" onsubmit="return validacion()" method="post"></form>
+            <h2 class="mb-2">Datos Personales</h2>
+            <h5>Empleado</h5>
+            <br>
+            <div class="form-group">
+                <label for="nombre" class="required-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido" class="required-label">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="edad" class="required-label">Edad</label><br>
+                <input type="tel" id="edad" name="edad" placeholder="Ingrese su edad" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion" class="required-label">Dirección</label>
+                <input type="text" id="pais"  name="pais" placeholder="País" required>
+                <input type="text" id="ciudad"  name="ciudad" placeholder="Ciudad" required>
+                <input type="text" id="calle"  name="calle" placeholder="Calle" required>
+                <input type="text" id="numero"  name="numero" placeholder="Número" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono" class="required-label">Teléfono</label><br>
+                <input type="text" id="codarea" name="codarea" placeholder="(011)" required>
+                <input type="text" id="telefono" name="telefono" placeholder="Ingrese su numero sin código de area" required>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
